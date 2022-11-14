@@ -4,6 +4,7 @@
  */
 package vista1;
 
+import Controladorg.jugadorControl.JugadorControl;
 import estidiante_service.EstudianteServiceImpl;
 import modelo1.Asignatura;
 import modelo1.Atencion;
@@ -21,7 +22,7 @@ import jugador_servicio.JugadorServiceImpl;
  public class Principal {
     
     public static void main(String[] args) {
-       
+       /*
         var mauricio = new Dueño("0103667754","Mauricio Ortiz");
         mauricio.nuevoTelefono("0984357604", 0, "Móvil", "tuenti");
         mauricio.nuevoTelefono("074078385",2,"Casa","Etapa");
@@ -72,7 +73,20 @@ import jugador_servicio.JugadorServiceImpl;
      BasedeDatos2.modificar(1, manuel);
      System.out.println(BasedeDatos2.listar());
      
-     
+     */
+       
+       var jugadorControl = new JugadorControl();
+       var datitos = new String[7];
+       datitos[0]="10";
+       datitos[1]="";
+       datitos[2]="";
+       datitos[3]="";
+       datitos[4]="";
+       datitos[5]="";
+       datitos[6]="";
+       
+       System.out.print(jugadorControl.crear(datitos));
+       
     }   
 }   
 
