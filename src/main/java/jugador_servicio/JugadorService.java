@@ -9,7 +9,7 @@ import java.util.List;
  *
  * @author LAB-2
  */
-public interface JugadorSevice {
+public interface JugadorService {
     public abstract void crear(Jugador jugador);
     public abstract void modificar(int codigo, Jugador JugadorModificado);
     public abstract void eliminar(int codigo);

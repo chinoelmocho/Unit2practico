@@ -12,16 +12,18 @@ import modelo1.Jugador;
  * @author David
  */
     
-   public class JugadorServiceImpl {
+   public class JugadorServiceImpl implements JugadorService {
  private List<Jugador> jugadorList;
     
     public JugadorServiceImpl(){
     this.jugadorList=new ArrayList<>();
     }
+ @Override
     public void crear(Jugador jugadors){
     this.jugadorList.add(jugadors);
     
     }
+ @Override
     public void modificar(int codigo,Jugador JugadorModificado){
         var indice=0;
         for (var jugador:this.jugadorList){
@@ -40,12 +42,14 @@ import modelo1.Jugador;
     
     }
   
+ @Override
   public List<Jugador> listar(){
     return this.jugadorList;
     
 }  
 
   
+ @Override
   public void eliminar(int codigo){
   var indice=0;
         for (var jugador:this.jugadorList){

@@ -12,7 +12,7 @@ import modelo1.Estudiante;
  *
  * @author David
  */
-public class EstudianteServiceImpl {
+public class EstudianteServiceImpl implements EstudianteService {
 
     List<Estudiante> estudianteList;
 
@@ -20,6 +20,7 @@ public class EstudianteServiceImpl {
         this.estudianteList = new ArrayList<>();
     }
 
+    @Override
     public void modificar(int codigo, Estudiante estudianteModificado) {
         var indice = 0;
         for (var estudent : this.estudianteList) {
@@ -35,15 +36,18 @@ public class EstudianteServiceImpl {
 
     }
 
+    @Override
     public void crear(Estudiante estudiantes) {
         this.estudianteList.add(estudiantes);
 
     }
 
+    @Override
     public List<Estudiante> listar() {
         return this.estudianteList;
     }
 
+    @Override
     public void eliminar(int codigo) {
         var indice = 0;
         for (var estudent : this.estudianteList) {
